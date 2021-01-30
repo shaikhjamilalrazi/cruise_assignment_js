@@ -131,7 +131,7 @@ a.active {
 .ec_plus_btn,
 .ec_minus_btn {
   cursor: pointer;
-  background-color: DodgerBlue;
+  background-color: #e33741;
   border: none;
   color: white;
   padding: 6px 12px;
@@ -141,6 +141,6 @@ a.active {
 .message {
   text-align: center;
   font-weight: bold;
-  color: tomato;
+  color: #e33741;
   display: none;
 }

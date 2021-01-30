@@ -45,6 +45,8 @@ function calculateTotal() {
 document.body.addEventListener("click", function (e) {
   // Setting button class name
   let btnClass = e.target.className;
+
+  // checkng button class name
   if (btnClass == "fc_plus_btn") {
     increaseValue(fcInput, true);
     calculateTotal();
@@ -66,8 +68,19 @@ document.body.addEventListener("click", function (e) {
 // Booking Button
 bookNowBtn.addEventListener("click", function () {
   const message = document.querySelector(".message");
-  message.style.display = "block";
-  setTimeout(function () {
-    message.style.display = "none";
-  }, 1000);
+
+  if (parseInt(total.innerText.slice(1)) > 0) {
+    message.style.display = "block";
+
+    fcInput.value = 0;
+    ecInput.value = 0;
+
+    subTotalValue.innerText = "$0";
+    vatValue.innerText = "$0";
+    total.innerText = "$0";
+
+    setTimeout(function () {
+      message.style.display = "none";
+    }, 1500);
+  }
 });
